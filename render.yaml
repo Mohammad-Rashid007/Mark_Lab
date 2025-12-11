@@ -7,5 +7,5 @@ services:
       python manage.py collectstatic --noinput
       python manage.py migrate
     startCommand: gunicorn crmproject.wsgi --bind 0.0.0.0:$PORT
-    plan: free
     autoDeploy: true
+    plan: free
