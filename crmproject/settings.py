@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-krl&eps*u(l81714x7-isdsz+!9nv%@0$f$x$h84()%3ayxkl@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mark-lab.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
