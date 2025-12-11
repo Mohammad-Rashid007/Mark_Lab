@@ -1,0 +1,332 @@
+{% extends "parent.html" %}
+{% load static %}
+
+{% block body %}
+
+<!-- ========== HERO ========== -->
+<section class="mb-5" style="margin-top: 8px;">
+  <div class="position-relative overflow-hidden rounded" style="background: linear-gradient(120deg, #4b85dd 0%, #db3131 100%);">
+    <img src="{% static 'images/image1.jpg' %}" alt="hero" class="w-100" style="height:60vh; object-fit:cover; opacity:0;">
+    <div class="container position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="display-4 fw-bold">MARC Laboratory — Excellence in Diagnostics & Care</h1>
+      <p class="lead mt-3">Trusted testing • Accredited lab • Advanced CRM solutions for healthcare & pharma</p>
+      <div class="mt-4">
+        <a href="{% url 'crmapp:registration' %}" class="btn btn-light btn-lg me-2">Get Started</a>
+        <a href="{% url 'crmapp:contactus' %}" class="btn btn-outline-light btn-lg">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Our Services</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0 service-card p-4 text-center">
+        <img src="{% static 'images/icon3.png' %}" width="72" class="mb-3 mx-auto" alt="Advanced Testing">
+        <h5 class="fw-semibold">Advanced Testing</h5>
+        <p class="text-muted">State-of-the-art diagnostics with fast, accurate results and full traceability.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0 service-card p-4 text-center">
+        <img src="{% static 'images/icon2.png' %}" width="72" class="mb-3 mx-auto" alt="Research">
+        <h5 class="fw-semibold">Research & Development</h5>
+        <p class="text-muted">Formulation support, stability testing and regulatory-ready documentation.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0 service-card p-4 text-center">
+        <img src="{% static 'images/icon1.png' %}" width="72" class="mb-3 mx-auto" alt="Supply">
+        <h5 class="fw-semibold">Supply & Distribution</h5>
+        <p class="text-muted">Quality-controlled supply chain for both human and veterinary products.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COUNTERS ========== -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3 mb-3">
+        <div class="p-4 rounded shadow-sm">
+          <h3 class="mb-0"><span class="counter" data-target="15">0</span>+</h3>
+          <p class="text-muted">Years Experience</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="p-4 rounded shadow-sm">
+          <h3 class="mb-0"><span class="counter" data-target="12000">0</span>+</h3>
+          <p class="text-muted">Tests Completed</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="p-4 rounded shadow-sm">
+          <h3 class="mb-0"><span class="counter" data-target="5000">0</span>+</h3>
+          <p class="text-muted">Satisfied Clients</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="p-4 rounded shadow-sm">
+          <h3 class="mb-0"><span class="counter" data-target="98">0</span>%</h3>
+          <p class="text-muted">On-time Delivery</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM ========== -->
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Meet Our Team</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-md-3">
+      <div class="card border-0 shadow-sm text-center p-3">
+        <img src="{% static 'images/Rashid1.jpeg' %}" class="rounded-circle mx-auto mt-2" width="110" height="110" alt="Dr. A">
+        <div class="card-body">
+          <h6 class="fw-bold mb-0">Dr. Mohammad Rashid</h6>
+          <small class="text-muted">Head - Diagnostics</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="card border-0 shadow-sm text-center p-3">
+        <img src="{% static 'images/Abuzar.jpeg' %}" class="rounded-circle mx-auto mt-2" width="110" height="110" alt="Dr. B">
+        <div class="card-body">
+          <h6 class="fw-bold mb-0">Dr. Abuzar Khan</h6>
+          <small class="text-muted">Quality Manager</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="card border-0 shadow-sm text-center p-3">
+        <img src="{% static 'images/Faiz.jpeg' %}" class="rounded-circle mx-auto mt-2" width="110" height="110" alt="Ms. C">
+        <div class="card-body">
+          <h6 class="fw-bold mb-0">Mr. Mohammad Faiz</h6>
+          <small class="text-muted">R&D Specialist</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="card border-0 shadow-sm text-center p-3">
+        <img src="{% static 'images/Rehan.jpeg' %}" class="rounded-circle mx-auto mt-2" width="110" height="110" alt="Mr. D">
+        <div class="card-body">
+          <h6 class="fw-bold mb-0">Mr. Rehan Raja</h6>
+          <small class="text-muted">Operations</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="py-5" style="background:#f7f9ff;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">What Our Clients Say</h2>
+
+    <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center">
+            <blockquote class="blockquote text-center" style="max-width:800px;">
+              <p class="mb-3">"Excellent service and accurate testing. Highly professional team."</p>
+              <footer class="blockquote-footer">Dr. Ravi Kumar — Clinic Owner</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center">
+            <blockquote class="blockquote text-center" style="max-width:800px;">
+              <p class="mb-3">"Reliable results and fast turnaround. MARC Lab is our preferred partner."</p>
+              <footer class="blockquote-footer">Ms. Anjali — Hospital Procurement</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center">
+            <blockquote class="blockquote text-center" style="max-width:800px;">
+              <p class="mb-3">"Great quality and consistent support throughout our projects."</p>
+              <footer class="blockquote-footer">Mr. Suresh — Veterinary Clinic</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+          What types of tests do you offer?
+        </button>
+      </h2>
+      <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We offer a wide range of human and veterinary diagnostics: hematology, biochemistry, microbiology, and specialized assays.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+          How fast are the test results delivered?
+        </button>
+      </h2>
+      <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Most routine tests are delivered within 24–48 hours. Specialized tests vary — we communicate timelines upfront.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+          Do you provide bulk supply for clinics and hospitals?
+        </button>
+      </h2>
+      <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes — we provide bulk supply and long-term partnerships for hospitals, clinics and veterinary centers.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALLERY ========== -->
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Gallery</h2>
+  <div class="row g-3">
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/bodyimg1.jpg' %}" alt="gallery1" class="img-fluid rounded shadow gallery-image">
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/bodyimg2.jpg' %}" alt="gallery2" class="img-fluid rounded shadow gallery-image">
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/bodyimg3.jpg' %}" alt="gallery3" class="img-fluid rounded shadow gallery-image">
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/bodyimg4.jpg' %}" alt="gallery4" class="img-fluid rounded shadow gallery-image">
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/about-pic1.jpg' %}" alt="gallery5" class="img-fluid rounded shadow gallery-image">
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <img src="{% static 'images/about-pic2.jpg' %}" alt="gallery6" class="img-fluid rounded shadow gallery-image">
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BOTTOM ========== -->
+<section class="py-5 text-center" style="background: linear-gradient(90deg,#4b85dd 0%, #db3131 100%); color:white; border-radius:8px;">
+  <div class="container">
+    <h3 class="fw-bold">Ready to work with MARC Lab?</h3>
+    <p class="mb-3">Request a demo or contact our sales team for partnerships and bulk orders.</p>
+    <a href="{% url 'crmapp:contactus' %}" class="btn btn-light btn-lg">Request Quote</a>
+  </div>
+</section>
+
+<!-- ========== Inline Styles & Scripts ========== -->
+<style>
+  .service-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(13,110,253,0.12); }
+
+  .gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform .3s ease, filter .3s ease;
+  }
+  .gallery-image:hover { transform: scale(1.03); filter: brightness(.9); }
+
+  /* subtle fade-up animation */
+  .fade-up { opacity: 0; transform: translateY(12px); transition: all .6s ease; }
+  .fade-up.show { opacity: 1; transform: translateY(0); }
+
+  @media (max-width:767px) {
+    .gallery-image { aspect-ratio: 16 / 9; }
+    .page-body { padding: 16px; }
+  }
+</style>
+
+<script>
+  // ---------- Fade-up on scroll ----------
+  (function () {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.card, .gallery-image, .service-card, .page-body > *:not(.carousel)').forEach(el => {
+      el.classList.add('fade-up');
+      io.observe(el);
+    });
+  })();
+
+  // ---------- Simple counters ----------
+  (function () {
+    const counters = document.querySelectorAll('.counter');
+    if (!counters.length) return;
+
+    const startCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1600;
+        let start = 0;
+        const step = Math.ceil(target / (duration / 16));
+        const run = () => {
+          start += step;
+          if (start >= target) {
+            counter.textContent = target;
+          } else {
+            counter.textContent = start;
+            requestAnimationFrame(run);
+          }
+        };
+        run();
+      });
+    };
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          startCounters();
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    io.observe(document.querySelector('.counter') || document.body);
+  })();
+</script>
+
+{% endblock %}

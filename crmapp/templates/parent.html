@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARC Lab — CRM System</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Top Contact Bar */
+        .top-bar {
+            background: linear-gradient(to right, #d9534f, #c9302c);
+            color: white;
+            font-size: 14px;
+            padding: 6px 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white !important;
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #eee;
+            padding: 30px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Page Body Wrapper */
+        .page-body {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+
+        <!-- Top Contact Bar -->
+        <!-- 🌟 Modern Premium Top Contact Bar -->
+        <div class="topbar py-1 px-3 d-flex justify-content-between align-items-center">
+            
+            <!-- Left Side -->
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center text-white gap-2">
+                    <i class="bi bi-telephone-outbound-fill fs-6"></i>
+                    <span class="fw-semibold">+91-1122334455</span>
+                </div>
+
+                <div class="d-flex align-items-center text-white gap-2">
+                    <i class="bi bi-envelope-at-fill fs-6"></i>
+                    <span class="fw-semibold">marc_cure@gmail.com</span>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-white small fw-semibold me-2">Follow Us</span>
+
+                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- 🌟 Topbar Styling -->
+        <style>
+        .topbar {
+            background: linear-gradient(90deg, #b3143d 0%, #7a0909 100%);
+            color: white;
+            font-size: 14px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 18px;
+            transition: .2s ease;
+        }
+
+        .social-icon:hover {
+            color: #ffeeba;
+            transform: translateY(-2px);
+        }
+        </style>
+
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="{% url 'crmapp:index' %}">
+                    <img src="{% static 'images/logo.jpg' %}" width="50" height="50"
+                         class="rounded me-2"> MARC Lab
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crmapp:index' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crmapp:aboutus' %}">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crmapp:registration' %}">Registration</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crmapp:login' %}">Login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'crmapp:contactus' %}">Contact Us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slider -->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="{% static 'images/image1.jpg' %}" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/image2.jpg' %}" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/image3.jpg' %}" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/image4.jpg' %}" class="d-block w-100">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- Modern Body Wrapper -->
+        <div class="container">
+            <div class="page-body">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            © 2025 MARC Lab | Developed By Mohammad Rashid
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "customerparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">Products</h1>   
+            <table class="table">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>MFG Date</th>
+                    <th>Expiry Date</th>
+                    <th>Price</th>
+                    <th>Product Pic</th>
+                </tr>
+                {% for p in prod %}
+                <tr>
+                    <td>{{p.pid}}</td>
+                    <td>{{p.productname}}</td>
+                    <td>{{p.mfgdate}}</td>
+                    <td>{{p.expdate}}</td>
+                    <td>{{p.price}}</td>
+                    <td>
+                        <img src="{{p.productpic.url}}" alt="" style="height: 100px; width: 100px;">
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock body %}
