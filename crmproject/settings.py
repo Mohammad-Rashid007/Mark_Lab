@@ -33,6 +33,11 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
 
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-temp-key-for-local-only"
+)
+
 
 # Application definition
 
