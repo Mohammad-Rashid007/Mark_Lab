@@ -29,9 +29,7 @@ DEBUG = os.environ.get("DEBUG", "True") == "True"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")).split(",")
-
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")).split(",") if os.environ.get("ALLOWED_HOSTS") or os.environ.get("RENDER_EXTERNAL_HOSTNAME") else ['mark-lab.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,7 +127,10 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
