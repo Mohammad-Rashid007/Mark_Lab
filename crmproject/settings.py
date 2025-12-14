@@ -22,14 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "dev-key")
+DEBUG = False
 
-DEBUG = os.environ.get("DEBUG", "True") == "True"
+ALLOWED_HOSTS = ['mark-lab.onrender.com', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://mark-lab.onrender.com']
 
-# SECURITY WARNING: don't run with debug turned on in production!
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")).split(",") if os.environ.get("ALLOWED_HOSTS") or os.environ.get("RENDER_EXTERNAL_HOSTNAME") else ['mark-lab.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
